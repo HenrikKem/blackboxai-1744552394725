@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.studyplanner.MainController">
+    <top>
+        <MenuBar fx:id="menuBar">
+            <menus>
+                <Menu text="Datei">
+                    <items>
+                        <MenuItem text="Neu"/>
+                        <MenuItem text="Öffnen"/>
+                        <MenuItem text="Speichern"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Beenden"/>
+                    </items>
+                </Menu>
+                <Menu text="Bearbeiten"/>
+                <Menu text="Hilfe"/>
+            </menus>
+        </MenuBar>
+    </top>
+    
+    <center>
+        <TabPane fx:id="mainTabPane">
+            <tabs>
+                <Tab fx:id="calendarTab" text="Kalender">
+                    <content>
+                        <Label text="Kalenderansicht wird hier angezeigt"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="subjectsTab" text="Fächer">
+                    <content>
+                        <Label text="Fächerverwaltung wird hier angezeigt"/>
+                    </content>
+                </Tab>
+                <Tab fx:id="progressTab" text="Fortschritt">
+                    <content>
+                        <Label text="Fortschrittsanzeige wird hier angezeigt"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+    
+    <bottom>
+        <HBox style="-fx-background-color: #eee; -fx-padding: 5px;">
+            <Label fx:id="statusLabel" text="Bereit"/>
+        </HBox>
+    </bottom>
+</BorderPane>
